@@ -36,9 +36,6 @@ local config = {
   -- Diagnostics configuration (for vim.diagnostics.config({}))
   diagnostics = require "user.core.diagnostics",
 
-  -- null-ls configuration
-  ["null-ls"] = require "user.plugins.null-ls",
-
   -- This function is run last
   -- good place to configure mappings and vim options
   polish = require "user.core.polish",

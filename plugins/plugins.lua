@@ -8,6 +8,7 @@ return {
   },
   treesitter = require "user.plugins.treesitter",
   ["neo-tree"] = require "user.plugins.neo-tree",
+  ["null-ls"] = require "user.plugins.null-ls",
   -- bufferline = require "user.plugins.bufferline",
   -- lualine = require "user.plugins.lualine",
   -- colorizer = require "user.plugins.colorizer",
