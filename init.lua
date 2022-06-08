@@ -6,14 +6,13 @@ end
 
 local config = {
 
+  updater = require "user.core.updater",
+
   -- Set colorscheme
   colorscheme = colorscheme,
 
   -- Default theme configuration
   default_theme = require "user.theme",
-
-  -- Disable default plugins
-  enabled = require "user.core.default_plugins",
 
   -- Disable AstroNvim ui features
   ui = require "user.core.ui",
@@ -25,7 +24,7 @@ local config = {
   luasnip = require "user.plugins.luasnip",
 
   -- Modify which-key registration
-  -- ["which-key"] = require "user.plugins.which-key",
+  ["which-key"] = require "user.plugins.which-key",
 
   -- CMP Source Priorities
   cmp = require "user.plugins.nvim-cmp",

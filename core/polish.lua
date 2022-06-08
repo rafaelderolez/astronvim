@@ -3,9 +3,11 @@ return function()
   local set = vim.opt
   -- Set options
   set.relativenumber = true
+  set.wrap = true
 
   -- Set key bindings
   map("n", "<C-s>", ":w!<CR>")
+  map("n", "<esc>", ":noh<CR>")
 
   -- Set autocommands
   vim.api.nvim_create_augroup("packer_conf", {})
@@ -16,6 +18,12 @@ return function()
     command = "source <afile> | PackerSync",
   })
 
+  vim.api.nvim_create_autocmd("BufWritePre", {
+    desc = "EslintFixAll before save",
+    pattern = "*.tsx,*.ts,*.jsx,*.js",
+    command = "EslintFixAll",
+  })
+
   -- Set up custom filetypes
   vim.filetype.add {
     extension = {
@@ -23,6 +31,6 @@ return function()
     },
   }
 
-  -- vim.keymap.del("t", "<esc>")
+  vim.keymap.del("t", "<esc>")
   -- vim.keymap.del("t", "jk")
 end

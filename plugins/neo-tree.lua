@@ -28,6 +28,7 @@ return {
   },
   window = {
     width = 30,
+    position = "right",
     mappings = {
       ["o"] = "open",
     },
@@ -42,6 +43,7 @@ return {
         "thumbs.db",
         "node_modules",
         "__pycache__",
+        ".github",
       },
     },
     follow_current_file = true,
