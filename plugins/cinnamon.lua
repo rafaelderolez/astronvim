@@ -1,4 +1,4 @@
 return {
   -- extra_keymaps = true,
-  default_delay = 7,
+  default_delay = 3,
 }

@@ -24,6 +24,11 @@ return function()
     command = "EslintFixAll",
   })
 
+  vim.api.nvim_create_autocmd("BufWinEnter", {
+    desc = "Disable comment continuation",
+    command = "set formatoptions-=cro",
+  })
+
   -- Set up custom filetypes
   vim.filetype.add {
     extension = {

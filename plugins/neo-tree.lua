@@ -27,7 +27,7 @@ return {
     },
   },
   window = {
-    width = 30,
+    width = 40,
     position = "right",
     mappings = {
       ["o"] = "open",

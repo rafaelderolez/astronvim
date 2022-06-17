@@ -10,14 +10,14 @@ return {
     "zbirenbaum/copilot.lua",
     event = "InsertEnter",
     config = function()
-      vim.schedule(function()
+      vim.defer_fn(function()
         require("copilot").setup()
-      end)
+      end, 100)
     end,
   },
   {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
+    module = "copilot_cmp",
     config = function()
       astronvim.add_user_cmp_source "copilot"
     end,
