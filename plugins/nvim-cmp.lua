@@ -15,7 +15,6 @@ if cmp_ok and lspkind_ok then
     },
     formatting = {
       fields = { "kind", "abbr", "menu" },
-
       format = function(entry, vim_item)
         if entry.source.name == "copilot" then
           vim_item.kind = ""
