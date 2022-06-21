@@ -12,17 +12,21 @@ return {
     config = function()
       vim.defer_fn(function()
         require("copilot").setup()
+        vim.g.copilot_no_tab_map = true
+        vim.g.copilot_assume_mapped = true
+        vim.g.copilot_tab_fallback = ""
       end, 100)
     end,
   },
   {
     "zbirenbaum/copilot-cmp",
+    requires = { "onsails/lspkind.nvim" },
+    after = { "copilot.lua", "nvim-cmp" },
     module = "copilot_cmp",
     config = function()
       astronvim.add_user_cmp_source "copilot"
     end,
   },
-  "github/copilot.vim",
   "windwp/nvim-spectre",
   {
     "nvim-treesitter/nvim-treesitter-context",
