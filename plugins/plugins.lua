@@ -11,6 +11,7 @@ return {
   ["neo-tree"] = require "user.plugins.neo-tree",
   ["null-ls"] = require "user.plugins.null-ls",
   cinnamon = require "user.plugins.cinnamon",
+  cmp = require "user.plugins.nvim-cmp",
   -- lualine = require "user.plugins.lualine",
   -- colorizer = require "user.plugins.colorizer",
   -- notify = require "user.plugins.notify",
