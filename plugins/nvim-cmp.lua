@@ -15,5 +15,3 @@ return {
     path = 250,
   },
 }
-
--- function that calculates days between dates
