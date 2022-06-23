@@ -33,11 +33,13 @@ if status_ok then
     },
     -- NOTE: You can remove this on attach function to disable format on save
     on_attach = function(client)
-      if client.resolved_capabilities.document_formatting then
+      if client.supports_method "textDocument/formatting" then
         vim.api.nvim_create_autocmd("BufWritePre", {
           desc = "Auto format before save",
           pattern = "<buffer>",
-          callback = vim.lsp.buf.formatting_sync,
+          callback = function()
+            vim.lsp.buf.format()
+          end,
         })
       end
     end,
