@@ -38,7 +38,11 @@ if status_ok then
           desc = "Auto format before save",
           pattern = "<buffer>",
           callback = function()
-            vim.lsp.buf.format()
+            -- neovim 0.8
+            -- vim.lsp.buf.format()
+
+            -- neovim 0.7
+            vim.lsp.buf.formatting_sync()
           end,
         })
       end
