@@ -29,6 +29,17 @@ return function()
     command = "set formatoptions-=cro",
   })
 
+  vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight on yank",
+    callback = function() vim.highlight.on_yank { higroup = "IncSearch", timeout = 200 } end,
+  })
+
+  vim.api.nvim_create_autocmd("BufEnter", {
+    desc = "Attach package-info which-key mappings",
+    pattern = { "package.json" },
+    callback = function() require("user.plugins.which-key-attachments").attach_npm(0) end,
+  })
+
   -- Set up custom filetypes
   vim.filetype.add {
     extension = {
