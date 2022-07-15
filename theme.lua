@@ -21,21 +21,15 @@ function M.hi_colors()
   end
   for k, v in pairs(color_binds) do
     local found, color = pcall(get_hl_by_name, v)
-    if found then
-      colors[k] = color
-    end
+    if found then colors[k] = color end
   end
   return colors
 end
 
 function M.telescope_theme()
-  local function set_bg(group, bg)
-    vim.cmd("hi " .. group .. " guibg=" .. bg)
-  end
+  local function set_bg(group, bg) vim.cmd("hi " .. group .. " guibg=" .. bg) end
 
-  local function set_fg_bg(group, fg, bg)
-    vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg)
-  end
+  local function set_fg_bg(group, fg, bg) vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg) end
 
   local colors = M.hi_colors()
   set_fg_bg("TelescopeBorder", colors.bg_alt, colors.bg)
