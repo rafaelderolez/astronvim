@@ -43,14 +43,5 @@ return function()
   }
 
   vim.keymap.del("t", "<esc>")
-  -- vim.keymap.del("t", "jk")
-
-  -- FOLDS
-  set.foldmethod = "expr"
-  set.foldexpr = "nvim_treesitter#foldexpr()"
-
-  vim.api.nvim_create_autocmd("BufReadPost,FileReadPost", {
-    desc = "Open all folds",
-    command = "normal zR",
-  })
+  vim.keymap.del("t", "jk")
 end
