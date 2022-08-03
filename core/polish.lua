@@ -1,6 +1,7 @@
 return function()
   local map = vim.keymap.set
   local set = vim.opt
+
   -- Set options
   set.relativenumber = true
   set.wrap = true
@@ -34,12 +35,6 @@ return function()
     callback = function() vim.highlight.on_yank { higroup = "IncSearch", timeout = 200 } end,
   })
 
-  vim.api.nvim_create_autocmd("BufEnter", {
-    desc = "Attach package-info which-key mappings",
-    pattern = { "package.json" },
-    callback = function() require("user.plugins.which-key-attachments").attach_npm(0) end,
-  })
-
   -- Set up custom filetypes
   vim.filetype.add {
     extension = {
@@ -49,4 +44,13 @@ return function()
 
   vim.keymap.del("t", "<esc>")
   -- vim.keymap.del("t", "jk")
+
+  -- FOLDS
+  set.foldmethod = "expr"
+  set.foldexpr = "nvim_treesitter#foldexpr()"
+
+  vim.api.nvim_create_autocmd("BufReadPost,FileReadPost", {
+    desc = "Open all folds",
+    command = "normal zR",
+  })
 end
