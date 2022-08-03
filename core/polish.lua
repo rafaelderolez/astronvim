@@ -19,12 +19,6 @@ return function()
     command = "source <afile> | PackerSync",
   })
 
-  vim.api.nvim_create_autocmd("BufWritePre", {
-    desc = "EslintFixAll before save",
-    pattern = "*.tsx,*.ts,*.jsx,*.js",
-    command = "EslintFixAll",
-  })
-
   vim.api.nvim_create_autocmd("BufWinEnter", {
     desc = "Disable comment continuation",
     command = "set formatoptions-=cro",
