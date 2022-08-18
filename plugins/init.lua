@@ -13,4 +13,13 @@ return {
       require("leap").set_default_keymaps()
     end,
   },
+  -- "github/copilot.vim", -- temp
+  {
+    "samodostal/copilot-client.lua",
+    requires = {
+      "zbirenbaum/copilot.lua",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function() require "user.plugins.copilot" end,
+  },
 }
