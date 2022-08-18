@@ -1,11 +1,13 @@
 return {
+  automatic_installation = true,
   ensure_installed = {
-    "css-lsp",
-    "graphql-language-service-cli",
-    "html-lsp",
-    "json-lsp",
-    "lua-language-server",
-    "typescript-language-server",
-    "yaml-language-server",
+    "html",
+    "cssls",
+    "tsserver",
+    "graphql",
+    "json",
+    "sumneko_lua",
+    "yamlls",
+    "dotls",
   },
 }
