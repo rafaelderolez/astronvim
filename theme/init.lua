@@ -11,4 +11,7 @@ return {
     highlights.Normal = { fg = C.fg, bg = C.bg }
     return highlights
   end,
+  plugins = {
+    lightspeed = true,
+  },
 }
