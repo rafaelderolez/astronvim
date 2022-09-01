@@ -11,7 +11,6 @@ return {
   ["neo-tree"] = require "user.plugins.neo-tree",
   ["null-ls"] = require "user.plugins.null-ls",
   cinnamon = require "user.plugins.cinnamon",
-  -- cmp = require "user.plugins.nvim-cmp",
   ["mason-lspconfig"] = require "user.plugins.mason-lspconfig",
   ["mason-tool-installer"] = require "user.plugins.mason-tool-installer",
   -- lualine = require "user.plugins.lualine",

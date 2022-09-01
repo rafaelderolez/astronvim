@@ -46,33 +46,33 @@ if status_ok then
     sources = {
       -- Set a formatter
       formatting.stylua,
-
-      formatting.eslint_d.with { prefer_local = "node_modules/.bin", condition = hasEslintConfig },
-
+      formatting.eslint_d.with {
+        prefer_local = "node_modules/.bin",
+        condition = hasEslintConfig,
+      },
       formatting.prettierd.with {
         prefer_local = "node_modules/.bin",
         condition = hasPrettierConfig,
       },
 
       -- Set a linter
-      diagnostics.eslint_d.with { prefer_local = "node_modules/.bin", condition = hasEslintConfig },
+      diagnostics.eslint_d.with {
+        prefer_local = "node_modules/.bin",
+        condition = hasEslintConfig,
+      },
 
       -- Set code actions
-      codeActions.eslint_d.with { prefer_local = "node_modules/.bin", condition = hasEslintConfig },
+      codeActions.eslint_d.with {
+        prefer_local = "node_modules/.bin",
+        condition = hasEslintConfig,
+      },
     },
-    -- NOTE: You can remove this on attach function to disable format on save
     on_attach = function(client)
-      if client.supports_method "textDocument/formatting" then
+      if client.resolved_capabilities.document_formatting then
         vim.api.nvim_create_autocmd("BufWritePre", {
           desc = "Auto format before save",
           pattern = "<buffer>",
-          callback = function()
-            -- neovim 0.8
-            -- vim.lsp.buf.format()
-
-            -- neovim 0.7
-            vim.lsp.buf.formatting_sync()
-          end,
+          callback = vim.lsp.buf.formatting_sync,
         })
       end
     end,

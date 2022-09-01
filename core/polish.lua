@@ -29,13 +29,11 @@ return function()
     callback = function() vim.highlight.on_yank { higroup = "IncSearch", timeout = 200 } end,
   })
 
-  -- Set up custom filetypes
-  vim.filetype.add {
-    extension = {
-      js = "javascriptreact",
-    },
-  }
-
   vim.keymap.del("t", "<esc>")
   vim.keymap.del("t", "jk")
+
+  -- Don't show me a million diagnostics when I'm still typing
+  vim.diagnostic.config {
+    update_in_insert = false,
+  }
 end
