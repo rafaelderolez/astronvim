@@ -42,7 +42,7 @@ if status_ok then
     -- Check supported formatters
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 
-    debug = true,
+    debug = false,
     sources = {
       -- Set a formatter
       formatting.stylua,
