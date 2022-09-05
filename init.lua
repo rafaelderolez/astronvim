@@ -2,7 +2,6 @@
 local colorscheme = "default_theme"
 local theme_installed, _ = pcall(require, "catppuccin")
 if theme_installed then colorscheme = "catppuccin" end
-vim.g.catppuccin_flavour = "mocha"
 
 local config = {
 
@@ -38,6 +37,12 @@ local config = {
   -- This function is run last
   -- good place to configure mappings and vim options
   polish = require "user.core.polish",
+
+  -- Vim options
+  options = require "user.core.options",
+
+  -- Alpha Dashboard Header
+  header = require "user.plugins.dashboard-header",
 }
 
 return config

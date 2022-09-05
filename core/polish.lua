@@ -1,16 +1,20 @@
 return function()
   local map = vim.keymap.set
-  local set = vim.opt
-
-  -- Set options
-  set.relativenumber = true
-  set.wrap = true
 
   -- Set key bindings
   map("n", "<C-s>", ":w!<CR>")
   map("n", "<esc>", ":noh<CR>")
 
   -- Set autocommands
+  vim.api.nvim_create_augroup("telescope", {})
+
+  vim.api.nvim_create_autocmd("VimEnter,ColorScheme", {
+    desc = "Load telescope theme",
+    group = "telescope",
+    pattern = "*",
+    command = "lua require('user.theme').telescope_theme()",
+  })
+
   vim.api.nvim_create_augroup("packer_conf", {})
   vim.api.nvim_create_autocmd("BufWritePost", {
     desc = "Sync packer after modifying plugins.lua",

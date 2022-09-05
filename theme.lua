@@ -1,6 +1,11 @@
 local M = {}
 
-function M.hi_colors()
+M.diagnostics_style = { italic = true }
+M.plugins = {
+  lightspeed = true,
+}
+
+M.hi_colors = function()
   local colors = {
     bg = "#16161D",
     bg_alt = "#1F1F28",
@@ -26,7 +31,7 @@ function M.hi_colors()
   return colors
 end
 
-function M.telescope_theme()
+M.telescope_theme = function()
   local function set_bg(group, bg) vim.cmd("hi " .. group .. " guibg=" .. bg) end
 
   local function set_fg_bg(group, fg, bg) vim.cmd("hi " .. group .. " guifg=" .. fg .. " guibg=" .. bg) end

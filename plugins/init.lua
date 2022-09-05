@@ -1,4 +1,3 @@
----@diagnostic disable: different-requires
 return {
   {
     "catppuccin/nvim",
@@ -11,13 +10,6 @@ return {
     "nvim-treesitter/nvim-treesitter-context",
     config = function() require("treesitter-context").setup { require "user.plugins.treesitter-context" } end,
   },
-  -- "github/copilot.vim", -- temp
-  -- {
-  --   "samodostal/copilot-client.lua",
-  --   requires = {
-  --     "zbirenbaum/copilot.lua",
-  --     "nvim-lua/plenary.nvim",
-  --   },
-  --   config = function() require "user.plugins.copilot" end,
-  -- },
+  "vuki656/package-info.nvim",
+  "nvim-telescope/telescope-file-browser.nvim",
 }
