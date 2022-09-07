@@ -13,7 +13,7 @@ return {
   cinnamon = require "user.plugins.cinnamon",
   ["mason-lspconfig"] = require "user.plugins.mason-lspconfig",
   ["mason-tool-installer"] = require "user.plugins.mason-tool-installer",
-  -- lualine = require "user.plugins.lualine",
+  -- feline = require "user.plugins.feline",
   -- colorizer = require "user.plugins.colorizer",
   -- notify = require "user.plugins.notify",
   -- symbols_outline = require "user.plugins.symbols-outline",
