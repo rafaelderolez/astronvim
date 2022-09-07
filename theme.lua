@@ -45,8 +45,6 @@ M.telescope_theme = function()
   set_fg_bg("TelescopePromptTitle", colors.bg, colors.red)
   set_fg_bg("TelescopeResultsTitle", colors.bg, colors.bg)
   set_fg_bg("TelescopeResultsBorder", colors.bg, colors.bg)
-  set_fg_bg("LvimInfoHeader", colors.bg, colors.green)
-  set_fg_bg("LvimInfoIdentifier", colors.red, colors.bg_alt)
   set_bg("TelescopeSelection", colors.bg_alt)
   set_bg("TelescopeNormal", colors.bg)
 end
