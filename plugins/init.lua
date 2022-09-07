@@ -11,5 +11,5 @@ return {
     config = function() require("treesitter-context").setup { require "user.plugins.treesitter-context" } end,
   },
   "vuki656/package-info.nvim",
-  "nvim-telescope/telescope-file-browser.nvim",
+  -- "nvim-telescope/telescope-file-browser.nvim",
 }
