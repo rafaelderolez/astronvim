@@ -1,4 +1,6 @@
 return {
+  hide_root_node = true,
+  retain_hidden_root_indent = false,
   popup_border_style = "rounded",
   enable_diagnostics = false,
   default_component_configs = {
