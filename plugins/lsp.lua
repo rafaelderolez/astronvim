@@ -1,4 +1,5 @@
 return {
+  skip_setup = { "tsserver" },
   ["server-settings"] = {
     emmet_ls = {
       filetypes = {

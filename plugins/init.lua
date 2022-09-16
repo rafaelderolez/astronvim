@@ -4,6 +4,7 @@ return {
     as = "catppuccin",
     config = function() require("catppuccin").setup(require "user.plugins.catppuccin") end,
   },
+
   "windwp/nvim-spectre", -- find & replace
   "ggandor/lightspeed.nvim", -- motion
   {
@@ -17,4 +18,9 @@ return {
     config = function() require("diffview").setup(require "user.plugins.diffview") end,
   },
   -- "nvim-telescope/telescope-file-browser.nvim",
+  {
+    "jose-elias-alvarez/typescript.nvim",
+    after = "mason-lspconfig.nvim",
+    config = function() require("typescript").setup(require "user.plugins.typescript") end,
+  },
 }
