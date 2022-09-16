@@ -25,9 +25,6 @@ local config = {
   -- Modify which-key registration
   ["which-key"] = require "user.plugins.which-key",
 
-  -- CMP Source Priorities
-  cmp = require "user.plugins.nvim-cmp",
-
   -- Extend LSP configuration
   lsp = require "user.plugins.lsp",
 

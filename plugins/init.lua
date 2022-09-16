@@ -25,11 +25,20 @@ return {
   },
 
   -- Copilot
-  -- "github/copilot.vim", -- only needed for initial install
-  "zbirenbaum/copilot.lua",
+  "github/copilot.vim", -- only needed for initial install
+  {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function() require("copilot").setup { panel = { enabled = false } } end, 100)
+    end,
+  },
   {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
-    config = function() require("copilot_cmp").setup() end,
+    config = function()
+      require("copilot_cmp").setup(require "user.plugins.copilot_cmp")
+      astronvim.add_cmp_source "copilot"
+    end,
   },
 }
