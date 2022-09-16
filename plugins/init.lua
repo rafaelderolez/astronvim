@@ -23,4 +23,13 @@ return {
     after = "mason-lspconfig.nvim",
     config = function() require("typescript").setup(require "user.plugins.typescript") end,
   },
+
+  -- Copilot
+  -- "github/copilot.vim", -- only needed for initial install
+  "zbirenbaum/copilot.lua",
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function() require("copilot_cmp").setup() end,
+  },
 }
