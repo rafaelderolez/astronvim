@@ -26,6 +26,7 @@ end
 
 local hasEslintConfig = function(utils)
   return utils.root_has_file {
+    ".eslintrc",
     ".eslintrc.js",
     ".eslintrc.cjs",
     ".eslintrc.yaml",
