@@ -17,7 +17,6 @@ return {
     requires = "nvim-lua/plenary.nvim",
     config = function() require("diffview").setup(require "user.plugins.diffview") end,
   },
-  -- "nvim-telescope/telescope-file-browser.nvim",
   {
     "jose-elias-alvarez/typescript.nvim",
     after = "mason-lspconfig.nvim",
@@ -35,10 +34,10 @@ return {
   },
   {
     "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
+    after = { "copilot.lua", "nvim-cmp" },
     config = function()
-      require("copilot_cmp").setup(require "user.plugins.copilot_cmp")
-      astronvim.add_cmp_source "copilot"
+      require("copilot_cmp").setup()
+      astronvim.add_cmp_source { name = "copilot", priority = 2000, max_item_count = 5 }
     end,
   },
 }
