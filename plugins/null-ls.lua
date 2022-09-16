@@ -51,10 +51,12 @@ if status_ok then
         prefer_local = "node_modules/.bin",
         condition = hasEslintConfig,
       },
-      formatting.prettierd.with {
-        prefer_local = "node_modules/.bin",
-        condition = hasPrettierConfig,
-      },
+
+      -- I always configure prettier via eslint
+      -- formatting.prettierd.with {
+      --   prefer_local = "node_modules/.bin",
+      --   condition = hasPrettierConfig,
+      -- },
 
       -- Set a linter
       diagnostics.eslint_d.with {
@@ -63,10 +65,13 @@ if status_ok then
       },
 
       -- Set code actions
-      codeActions.eslint_d.with {
-        prefer_local = "node_modules/.bin",
-        condition = hasEslintConfig,
-      },
+
+      -- I don't remember ever using this since setting it.
+      -- Leaving it disabled for now.
+      -- codeActions.eslint_d.with {
+      --   prefer_local = "node_modules/.bin",
+      --   condition = hasEslintConfig,
+      -- },
     },
     on_attach = function(client)
       if client.resolved_capabilities.document_formatting then
