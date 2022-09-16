@@ -40,7 +40,7 @@ return {
       colored_indent_levels = true,
     },
     neotree = {
-      enabled = false,
+      enabled = true,
       show_root = false,
       transparent_panel = false,
     },
