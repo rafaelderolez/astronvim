@@ -8,21 +8,21 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- Check supported code_actions
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
-local codeActions = null_ls.builtins.code_actions
+-- local codeActions = null_ls.builtins.code_actions
 
-local hasPrettierConfig = function(utils)
-  return utils.root_has_file {
-    ".prettierrc",
-    ".prettierrc.json",
-    ".prettierrc.yml",
-    ".prettierrc.yaml",
-    ".prettierrc.json5",
-    ".prettierrc.js",
-    ".prettierrc.cjs",
-    "prettier.config.js",
-    "prettier.config.cjs",
-  }
-end
+-- local hasPrettierConfig = function(utils)
+--   return utils.root_has_file {
+--     ".prettierrc",
+--     ".prettierrc.json",
+--     ".prettierrc.yml",
+--     ".prettierrc.yaml",
+--     ".prettierrc.json5",
+--     ".prettierrc.js",
+--     ".prettierrc.cjs",
+--     "prettier.config.js",
+--     "prettier.config.cjs",
+--   }
+-- end
 
 local hasEslintConfig = function(utils)
   return utils.root_has_file {

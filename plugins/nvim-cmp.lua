@@ -15,10 +15,10 @@ return {
     path = 700,
     buffer = false,
   },
-  sources = {
-    -- { name = "copilot", max_item_count = 5 },
-    -- { name = "nvim_lsp", max_item_count = 5 },
-    -- { name = "luasnip", max_item_count = 5 },
-    -- { name = "path", max_item_count = 5 },
-  },
+  -- sources = {
+  -- { name = "copilot", max_item_count = 5 },
+  -- { name = "nvim_lsp", max_item_count = 5 },
+  -- { name = "luasnip", max_item_count = 5 },
+  -- { name = "path", max_item_count = 5 },
+  -- },
 }
