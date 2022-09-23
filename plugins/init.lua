@@ -32,12 +32,14 @@ return {
       vim.defer_fn(function() require("copilot").setup { panel = { enabled = false } } end, 100)
     end,
   },
+  -- Cmp
   {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
-    config = function()
-      require("copilot_cmp").setup()
-      astronvim.add_cmp_source { name = "copilot", priority = 2000, max_item_count = 5 }
-    end,
+    config = function() require("copilot_cmp").setup() end,
+  },
+  {
+    "hrsh7th/cmp-cmdline",
+    after = "nvim-cmp",
   },
 }

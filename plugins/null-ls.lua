@@ -4,7 +4,7 @@ local formatting = null_ls.builtins.formatting
 
 -- Check supported linters
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
-local diagnostics = null_ls.builtins.diagnostics
+-- local diagnostics = null_ls.builtins.diagnostics
 
 -- Check supported code_actions
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
@@ -24,16 +24,16 @@ local diagnostics = null_ls.builtins.diagnostics
 --   }
 -- end
 
-local hasEslintConfig = function(utils)
-  return utils.root_has_file {
-    ".eslintrc",
-    ".eslintrc.js",
-    ".eslintrc.cjs",
-    ".eslintrc.yaml",
-    ".eslintrc.yml",
-    ".eslintrc.json",
-  }
-end
+-- local hasEslintConfig = function(utils)
+--   return utils.root_has_file {
+--     ".eslintrc",
+--     ".eslintrc.js",
+--     ".eslintrc.cjs",
+--     ".eslintrc.yaml",
+--     ".eslintrc.yml",
+--     ".eslintrc.json",
+--   }
+-- end
 
 if status_ok then
   return {
@@ -47,10 +47,10 @@ if status_ok then
     sources = {
       -- Set a formatter
       formatting.stylua,
-      formatting.eslint_d.with {
-        prefer_local = "node_modules/.bin",
-        condition = hasEslintConfig,
-      },
+      -- formatting.eslint_d.with {
+      --   prefer_local = "node_modules/.bin",
+      --   condition = hasEslintConfig,
+      -- },
 
       -- I always configure prettier via eslint
       -- formatting.prettierd.with {
@@ -59,10 +59,10 @@ if status_ok then
       -- },
 
       -- Set a linter
-      diagnostics.eslint_d.with {
-        prefer_local = "node_modules/.bin",
-        condition = hasEslintConfig,
-      },
+      -- diagnostics.eslint_d.with {
+      --   prefer_local = "node_modules/.bin",
+      --   condition = hasEslintConfig,
+      -- },
 
       -- Set code actions
 

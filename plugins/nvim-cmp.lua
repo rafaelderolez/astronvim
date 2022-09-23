@@ -7,18 +7,14 @@ cmp.setup.cmdline("/", {
   },
 })
 
-return {
-  source_priority = {
-    copilot = 1000,
-    nvim_lsp = 900,
-    luasnip = 800,
-    path = 700,
-    buffer = false,
+cmp.setup.cmdline(":", {
+  sources = {
+    { name = "cmdline" },
   },
-  -- sources = {
-  -- { name = "copilot", max_item_count = 5 },
-  -- { name = "nvim_lsp", max_item_count = 5 },
-  -- { name = "luasnip", max_item_count = 5 },
-  -- { name = "path", max_item_count = 5 },
-  -- },
+})
+
+return {
+  sources = {
+    { name = "copilot", max_item_count = 3 },
+  },
 }

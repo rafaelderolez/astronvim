@@ -22,6 +22,11 @@ local config = {
   -- Add paths for including more VS Code style snippets in luasnip
   luasnip = require "user.plugins.luasnip",
 
+  -- CMP Source Priorities
+  cmp = {
+    source_priority = require "user.plugins.nvim-cmp-priorities",
+  },
+
   -- Modify which-key registration
   ["which-key"] = require "user.plugins.which-key",
 
