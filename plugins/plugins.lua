@@ -13,8 +13,10 @@ return {
   cinnamon = require "user.plugins.cinnamon",
   ["mason-lspconfig"] = require "user.plugins.mason-lspconfig",
   ["mason-tool-installer"] = require "user.plugins.mason-tool-installer",
+  ["mason-null-ls"] = require "user.plugins.mason-null-ls",
   cmp = require "user.plugins.nvim-cmp",
   lspkind = require "user.plugins.lspkind",
+
   -- feline = require "user.plugins.feline",
   -- colorizer = require "user.plugins.colorizer",
   -- notify = require "user.plugins.notify",

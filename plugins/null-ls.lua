@@ -1,39 +1,15 @@
 local status_ok, null_ls = pcall(require, "null-ls")
 
+local command_resolver = require "null-ls.helpers.command_resolver"
 local formatting = null_ls.builtins.formatting
 
 -- Check supported linters
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
--- local diagnostics = null_ls.builtins.diagnostics
+local diagnostics = null_ls.builtins.diagnostics
 
 -- Check supported code_actions
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
 -- local codeActions = null_ls.builtins.code_actions
-
--- local hasPrettierConfig = function(utils)
---   return utils.root_has_file {
---     ".prettierrc",
---     ".prettierrc.json",
---     ".prettierrc.yml",
---     ".prettierrc.yaml",
---     ".prettierrc.json5",
---     ".prettierrc.js",
---     ".prettierrc.cjs",
---     "prettier.config.js",
---     "prettier.config.cjs",
---   }
--- end
-
--- local hasEslintConfig = function(utils)
---   return utils.root_has_file {
---     ".eslintrc",
---     ".eslintrc.js",
---     ".eslintrc.cjs",
---     ".eslintrc.yaml",
---     ".eslintrc.yml",
---     ".eslintrc.json",
---   }
--- end
 
 if status_ok then
   return {
@@ -45,33 +21,20 @@ if status_ok then
 
     debug = false,
     sources = {
-      -- Set a formatter
+      -- Formatting
       formatting.stylua,
-      -- formatting.eslint_d.with {
-      --   prefer_local = "node_modules/.bin",
-      --   condition = hasEslintConfig,
-      -- },
+      formatting.eslint_d.with {
+        dynamic_command = command_resolver.from_node_modules(),
+      },
 
-      -- I always configure prettier via eslint
       -- formatting.prettierd.with {
-      --   prefer_local = "node_modules/.bin",
-      --   condition = hasPrettierConfig,
+      --   dynamic_command = command_resolver.from_node_modules(),
       -- },
 
-      -- Set a linter
-      -- diagnostics.eslint_d.with {
-      --   prefer_local = "node_modules/.bin",
-      --   condition = hasEslintConfig,
-      -- },
-
-      -- Set code actions
-
-      -- I don't remember ever using this since setting it.
-      -- Leaving it disabled for now.
-      -- codeActions.eslint_d.with {
-      --   prefer_local = "node_modules/.bin",
-      --   condition = hasEslintConfig,
-      -- },
+      -- Diagnostics
+      diagnostics.eslint_d.with {
+        dynamic_command = command_resolver.from_node_modules(),
+      },
     },
     on_attach = function(client)
       if client.resolved_capabilities.document_formatting then
