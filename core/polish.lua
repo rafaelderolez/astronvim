@@ -2,8 +2,6 @@ return function()
   local map = vim.keymap.set
 
   -- Set key bindings
-  map("n", "<C-s>", ":w!<CR>")
-  map("n", "<esc>", ":noh<CR>")
 
   -- Set autocommands
   vim.api.nvim_create_augroup("telescope", {})
@@ -38,9 +36,6 @@ return function()
     desc = "Highlight on yank",
     callback = function() vim.highlight.on_yank { higroup = "IncSearch", timeout = 200 } end,
   })
-
-  vim.keymap.del("t", "<esc>")
-  vim.keymap.del("t", "jk")
 
   -- Don't show me a million diagnostics when I'm still typing
   vim.diagnostic.config {

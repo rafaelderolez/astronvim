@@ -13,9 +13,6 @@ local config = {
   -- Default theme configuration
   default_theme = require "user.theme",
 
-  -- Disable AstroNvim ui features
-  ui = require "user.core.ui",
-
   -- Configure plugins
   plugins = require "user.plugins.plugins",
 
@@ -36,7 +33,6 @@ local config = {
   -- Diagnostics configuration (for vim.diagnostics.config({}))
   diagnostics = require "user.core.diagnostics",
 
-  -- Diagnostics configuration (for vim.diagnostics.config({}))
   highlights = require "user.core.highlights",
 
   -- This function is run last
