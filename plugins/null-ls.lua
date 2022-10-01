@@ -36,14 +36,5 @@ if status_ok then
         dynamic_command = command_resolver.from_node_modules(),
       },
     },
-    on_attach = function(client)
-      if client.resolved_capabilities.document_formatting then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          desc = "Auto format before save",
-          pattern = "<buffer>",
-          callback = vim.lsp.buf.formatting_sync,
-        })
-      end
-    end,
   }
 end

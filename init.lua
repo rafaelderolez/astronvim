@@ -36,6 +36,9 @@ local config = {
   -- Diagnostics configuration (for vim.diagnostics.config({}))
   diagnostics = require "user.core.diagnostics",
 
+  -- Diagnostics configuration (for vim.diagnostics.config({}))
+  highlights = require "user.core.highlights",
+
   -- This function is run last
   -- good place to configure mappings and vim options
   polish = require "user.core.polish",

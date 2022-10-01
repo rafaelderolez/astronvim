@@ -1,8 +1,7 @@
 return {
-  register_mappings = {
+  register = {
     n = {
       ["<leader>"] = {
-        -- e = { "<cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", "Open File browser" },
         r = {
           name = "Find & Replace",
           ["r"] = { "<cmd>lua require('spectre').open()<CR>", "Open Spectre" },

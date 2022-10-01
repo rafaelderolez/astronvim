@@ -13,4 +13,7 @@ return {
   --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
   --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
   -- },
+
+  auto_reload = false,
+  auto_quit = false,
 }

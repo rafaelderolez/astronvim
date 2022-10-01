@@ -1,6 +1,5 @@
 local M = {}
 
-M.diagnostics_style = { italic = true }
 M.plugins = {
   lightspeed = true,
 }

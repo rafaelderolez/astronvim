@@ -2,6 +2,8 @@ return {
   opt = {
     relativenumber = true,
     background = "dark",
+    ch = 0, -- command height
+    -- ls = 0, -- last status
   },
   g = {
     catppuccin_flavour = "mocha",
