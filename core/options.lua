@@ -4,6 +4,7 @@ return {
     background = "dark",
     ch = 0, -- command height
     -- ls = 0, -- last status
+    wrap = true,
   },
   g = {
     catppuccin_flavour = "mocha",
