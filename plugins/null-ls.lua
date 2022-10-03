@@ -9,7 +9,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- Check supported code_actions
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
--- local codeActions = null_ls.builtins.code_actions
+local codeActions = null_ls.builtins.code_actions
 
 -- Formatting and linting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
@@ -36,6 +36,10 @@ if status_ok then
 
       -- Diagnostics
       diagnostics.eslint_d.with {
+        dynamic_command = command_resolver.from_node_modules(),
+      },
+
+      codeActions.eslint_d.with {
         dynamic_command = command_resolver.from_node_modules(),
       },
     },

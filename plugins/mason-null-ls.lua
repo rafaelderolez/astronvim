@@ -5,7 +5,7 @@ return {
     -- "prettierd",
     "pylint",
     "stylua",
-    "selene",
+    "luacheck",
     "yamllint",
     "shfmt",
     "jq",

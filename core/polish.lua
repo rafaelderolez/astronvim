@@ -1,6 +1,4 @@
 return function()
-  local map = vim.keymap.set
-
   -- Set key bindings
 
   -- Set autocommands
@@ -12,12 +10,6 @@ return function()
     pattern = "*",
     command = "lua require('user.theme').telescope_theme()",
   })
-
-  -- vim.api.nvim_create_autocmd("BufWritePre", {
-  --   desc = "Fix all fixable eslint problems before save",
-  --   pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
-  --   command = "silent! EslintFixAll",
-  -- })
 
   vim.api.nvim_create_augroup("packer_conf", {})
   vim.api.nvim_create_autocmd("BufWritePost", {
