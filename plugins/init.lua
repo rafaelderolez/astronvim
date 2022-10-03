@@ -24,7 +24,7 @@ return {
   },
 
   -- Copilot
-  "github/copilot.vim", -- only needed for initial install
+  -- "github/copilot.vim", -- only needed for initial install
   {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
