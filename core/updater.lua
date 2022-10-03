@@ -2,7 +2,7 @@ return {
   channel = "nightly",
   remote = "origin",
   -- version = "latest",
-  branch = "nightly",
+  -- branch = "nightly",
   -- commit = nil,
   pin_plugins = nil,
   skip_prompts = false,
