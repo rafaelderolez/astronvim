@@ -7,11 +7,11 @@ cmp.setup.cmdline("/", {
   },
 })
 
-cmp.setup.cmdline(":", {
-  sources = {
-    { name = "cmdline" },
-  },
-})
+-- cmp.setup.cmdline(":", {
+--   sources = {
+--     { name = "cmdline" },
+--   },
+-- })
 
 return {
   sources = {
