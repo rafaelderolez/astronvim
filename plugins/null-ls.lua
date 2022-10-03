@@ -11,14 +11,14 @@ local diagnostics = null_ls.builtins.diagnostics
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
 -- local codeActions = null_ls.builtins.code_actions
 
+-- Formatting and linting
+-- https://github.com/jose-elias-alvarez/null-ls.nvim
+
+-- Check supported formatters
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
+
 if status_ok then
   return {
-    -- Formatting and linting
-    -- https://github.com/jose-elias-alvarez/null-ls.nvim
-
-    -- Check supported formatters
-    -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
-
     debug = false,
     sources = {
       -- Formatting
@@ -29,6 +29,9 @@ if status_ok then
 
       -- formatting.prettierd.with {
       --   dynamic_command = command_resolver.from_node_modules(),
+      --   env = {
+      --     PRETTIERD_LOCAL_PRETTIER_ONLY = true,
+      --   },
       -- },
 
       -- Diagnostics

@@ -2,7 +2,7 @@ return {
   ensure_installed = {
     "actionlint",
     "eslint_d",
-    "prettierd",
+    -- "prettierd",
     "pylint",
     "stylua",
     "selene",
