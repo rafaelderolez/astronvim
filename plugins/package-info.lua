@@ -14,5 +14,5 @@ return {
   -- The plugin will try to auto-detect the package manager based on
   -- `yarn.lock` or `package-lock.json`. If none are found it will use the
   -- provided one, if nothing is provided it will use `npm`
-  package_manager = "npm",
+  package_manager = "yarn",
 }
