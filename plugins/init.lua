@@ -11,7 +11,11 @@ return {
     "nvim-treesitter/nvim-treesitter-context", -- show current sticky context
     config = function() require("treesitter-context").setup(require "user.plugins.treesitter-context") end,
   },
-  -- "vuki656/package-info.nvim", -- package.json helper (doesn't really work)
+  {
+
+    "vuki656/package-info.nvim",
+    config = function() require("package-info").setup(require "user.plugins.package-info") end,
+  },
   {
     "sindrets/diffview.nvim", -- git diff view
     requires = "nvim-lua/plenary.nvim",
