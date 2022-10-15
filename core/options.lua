@@ -3,7 +3,7 @@ return {
     relativenumber = true,
     background = "dark",
     ch = 0, -- command height
-    -- ls = 0, -- last status
+    ls = 2, -- last status
     wrap = true,
   },
   g = {
