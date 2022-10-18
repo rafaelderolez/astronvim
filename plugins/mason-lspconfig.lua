@@ -5,7 +5,7 @@ return {
     "cssls",
     "tsserver",
     "graphql",
-    "json",
+    "json-lsp",
     "sumneko_lua",
     "yamlls",
     "dotls",
