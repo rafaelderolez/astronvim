@@ -33,17 +33,7 @@ return {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
-      vim.defer_fn(function() require("copilot").setup { panel = { enabled = false } } end, 100)
+      vim.defer_fn(function() require("copilot").setup(require "user.plugins.copilot") end, 100)
     end,
-  },
-  -- Cmp
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
-    config = function() require("copilot_cmp").setup() end,
-  },
-  {
-    "hrsh7th/cmp-cmdline",
-    after = "nvim-cmp",
   },
 }
