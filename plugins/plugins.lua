@@ -13,7 +13,7 @@ return {
   ["mason-lspconfig"] = require "user.plugins.mason-lspconfig",
   ["mason-tool-installer"] = require "user.plugins.mason-tool-installer",
   ["mason-null-ls"] = require "user.plugins.mason-null-ls",
-  cmp = require "user.plugins.nvim-cmp",
+  -- cmp = require "user.plugins.nvim-cmp",
   lspkind = require "user.plugins.lspkind",
 
   -- colorizer = require "user.plugins.colorizer",
