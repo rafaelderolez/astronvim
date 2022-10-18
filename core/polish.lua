@@ -33,4 +33,6 @@ return function()
   vim.diagnostic.config {
     update_in_insert = false,
   }
+
+  require("telescope").load_extension "projects"
 end

@@ -19,5 +19,5 @@ return {
   -- colorizer = require "user.plugins.colorizer",
   -- notify = require "user.plugins.notify",
   -- symbols_outline = require "user.plugins.symbols-outline",
-  -- telescope = require "user.plugins.telescope",
+  telescope = require "user.plugins.telescope",
 }

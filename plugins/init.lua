@@ -26,6 +26,10 @@ return {
     after = "mason-lspconfig.nvim",
     config = function() require("typescript").setup(require "user.plugins.typescript") end,
   },
+  {
+    "ahmedkhalf/project.nvim",
+    config = function() require("project_nvim").setup {} end,
+  },
 
   -- Copilot
   -- "github/copilot.vim", -- only needed for initial install
