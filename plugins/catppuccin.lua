@@ -61,5 +61,4 @@ return {
     },
   },
   color_overrides = {},
-  highlight_overrides = {},
 }
