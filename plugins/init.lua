@@ -40,4 +40,8 @@ return {
       vim.defer_fn(function() require("copilot").setup(require "user.plugins.copilot") end, 100)
     end,
   },
+  {
+    "https://github.com/nat-418/boole.nvim",
+    config = function() require("boole").setup(require "user.plugins.boole") end,
+  },
 }
