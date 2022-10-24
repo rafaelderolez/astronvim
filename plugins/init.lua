@@ -4,9 +4,11 @@ return {
     as = "catppuccin",
     config = function() require("catppuccin").setup(require "user.plugins.catppuccin") end,
   },
-
   "windwp/nvim-spectre", -- find & replace
-  "ggandor/lightspeed.nvim", -- motion
+  {
+    "ggandor/leap.nvim",
+    config = function() require("leap").add_default_mappings() end,
+  },
   {
     "nvim-treesitter/nvim-treesitter-context", -- show current sticky context
     config = function() require("treesitter-context").setup(require "user.plugins.treesitter-context") end,
