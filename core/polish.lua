@@ -1,9 +1,15 @@
 return function()
-  -- Set key bindings
+  -- Set keybinds
 
+  -- Move lines/selections up and down
+  vim.cmd [[
+    noremap ∆ <Esc>:m .+1<CR>
+    noremap ˚ <Esc>:m .-2<CR>
+    vnoremap ∆ :m '>+1<CR>gv=gv
+    vnoremap ˚ :m '<-2<CR>gv=gv
+  ]]
   -- Set autocommands
   vim.api.nvim_create_augroup("telescope", {})
-
   vim.api.nvim_create_autocmd("VimEnter,ColorScheme", {
     desc = "Load telescope theme",
     group = "telescope",
