@@ -1,7 +1,7 @@
 local M = {}
 
 M.plugins = {
-  lightspeed = true,
+  leap = true,
 }
 
 M.hi_colors = function()
@@ -23,6 +23,7 @@ M.hi_colors = function()
     local ret = vim.api.nvim_get_hl_by_name(name.group, true)
     return string.format("#%06x", ret[name.property])
   end
+
   for k, v in pairs(color_binds) do
     local found, color = pcall(get_hl_by_name, v)
     if found then colors[k] = color end

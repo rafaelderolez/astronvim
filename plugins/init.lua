@@ -7,14 +7,16 @@ return {
   "windwp/nvim-spectre", -- find & replace
   {
     "ggandor/leap.nvim",
-    config = function() require("leap").add_default_mappings() end,
+    config = function()
+      require("leap").add_default_mappings()
+      require("leap").setup(require "user.plugins.leap")
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter-context", -- show current sticky context
     config = function() require("treesitter-context").setup(require "user.plugins.treesitter-context") end,
   },
   {
-
     "vuki656/package-info.nvim",
     config = function() require("package-info").setup(require "user.plugins.package-info") end,
   },
@@ -32,9 +34,6 @@ return {
     "ahmedkhalf/project.nvim",
     config = function() require("project_nvim").setup {} end,
   },
-
-  -- Copilot
-  -- "github/copilot.vim", -- only needed for initial install
   {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
@@ -45,5 +44,9 @@ return {
   {
     "https://github.com/nat-418/boole.nvim",
     config = function() require("boole").setup(require "user.plugins.boole") end,
+  },
+  {
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function() require("lsp_lines").setup() end,
   },
 }
