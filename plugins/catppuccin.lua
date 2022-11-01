@@ -30,7 +30,7 @@ return {
     which_key = true,
     telescope = true,
     cmp = true,
-    lightspeed = true,
+    leap = true,
     treesitter = true,
     treesitter_context = true,
     ts_rainbow = true,
