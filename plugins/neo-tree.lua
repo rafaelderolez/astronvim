@@ -45,7 +45,7 @@ return {
         "thumbs.db",
         "node_modules",
         "__pycache__",
-        ".github",
+        ".git",
       },
     },
     follow_current_file = true,
