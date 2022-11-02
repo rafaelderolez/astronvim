@@ -5,6 +5,7 @@ return {
     ch = 0, -- command height
     ls = 2, -- last status
     wrap = true,
+    lazyredraw = false,
   },
   g = {
     catppuccin_flavour = "mocha",

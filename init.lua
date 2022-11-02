@@ -11,7 +11,7 @@ local config = {
   colorscheme = colorscheme,
 
   -- Default theme configuration
-  default_theme = require "user.theme",
+  -- default_theme = require "user.theme",
 
   -- Configure plugins
   plugins = require "user.plugins.plugins",

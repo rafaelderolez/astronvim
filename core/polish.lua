@@ -12,13 +12,7 @@ return function()
   ]]
 
   -- Set autocommands
-  vim.api.nvim_create_augroup("telescope", {})
-  vim.api.nvim_create_autocmd("VimEnter,ColorScheme", {
-    desc = "Load telescope theme",
-    group = "telescope",
-    pattern = "*",
-    command = "lua require('user.theme').telescope_theme()",
-  })
+  vim.cmd [[autocmd ColorScheme * lua require('leap').init_highlight(true)]]
 
   vim.api.nvim_create_augroup("packer_conf", {})
   vim.api.nvim_create_autocmd("BufWritePost", {
