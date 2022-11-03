@@ -49,4 +49,5 @@ return {
     "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     config = function() require("lsp_lines").setup() end,
   },
+  { "folke/noice.nvim", config = function() require("noice").setup(require "user.plugins.noice") end },
 }

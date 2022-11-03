@@ -17,7 +17,7 @@ return {
   lspkind = require "user.plugins.lspkind",
 
   -- colorizer = require "user.plugins.colorizer",
-  -- notify = require "user.plugins.notify",
+  notify = require("user.plugins.notify"),
   -- symbols_outline = require "user.plugins.symbols-outline",
   telescope = require "user.plugins.telescope",
 }
