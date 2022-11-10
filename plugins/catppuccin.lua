@@ -26,6 +26,7 @@ return {
   },
   integrations = {
     -- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
+    mason = true,
     aerial = true,
     which_key = true,
     telescope = true,
