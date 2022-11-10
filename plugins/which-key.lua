@@ -2,6 +2,9 @@ return {
   register = {
     n = {
       ["<leader>"] = {
+        l = {
+          l = { "<cmd>lua require('logsitter').log()<CR>", "Turbo Console Log" },
+        },
         f = {
           p = { "<cmd>Telescope projects<CR>", "Telescope Projects" },
         },
