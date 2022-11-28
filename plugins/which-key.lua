@@ -1,3 +1,5 @@
+local utils = require "user.utils"
+
 return {
   show_help = false,
   show_keys = false,
@@ -7,6 +9,10 @@ return {
         d = { "<cmd>lua require('logsitter').log()<CR>", "Turbo Console Log" },
         f = {
           p = { "<cmd>Telescope projects<CR>", "Telescope Projects" },
+          d = {
+            function() utils.search_diagnostic() end,
+            "Search Diagnostic",
+          },
         },
         p = {
           r = { "<cmd>AstroReload<cr>", "AstroNvim Reload" },

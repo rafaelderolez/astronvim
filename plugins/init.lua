@@ -47,4 +47,5 @@ return {
   },
   { "folke/noice.nvim", config = function() require("noice").setup(require "user.plugins.noice") end },
   { "gaelph/logsitter.nvim" },
+  { "tyru/open-browser.vim" },
 }
