@@ -9,15 +9,13 @@ return {
   bufferline = require "user.plugins.bufferline",
   treesitter = require "user.plugins.treesitter",
   ["neo-tree"] = require "user.plugins.neo-tree",
-  ["null-ls"] = require "user.plugins.null-ls",
   ["mason-lspconfig"] = require "user.plugins.mason-lspconfig",
   ["mason-tool-installer"] = require "user.plugins.mason-tool-installer",
   ["mason-null-ls"] = require "user.plugins.mason-null-ls",
   -- cmp = require "user.plugins.nvim-cmp",
   lspkind = require "user.plugins.lspkind",
-
   -- colorizer = require "user.plugins.colorizer",
-  notify = require("user.plugins.notify"),
+  notify = require "user.plugins.notify",
   -- symbols_outline = require "user.plugins.symbols-outline",
   telescope = require "user.plugins.telescope",
 }
