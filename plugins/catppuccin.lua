@@ -33,7 +33,7 @@ return {
     cmp = true,
     leap = true,
     treesitter = true,
-    treesitter_context = true,
+    -- treesitter_context = true,
     ts_rainbow = true,
     notify = true,
     indent_blankline = {
