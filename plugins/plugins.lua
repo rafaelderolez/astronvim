@@ -18,4 +18,5 @@ return {
   notify = require "user.plugins.notify",
   -- symbols_outline = require "user.plugins.symbols-outline",
   telescope = require "user.plugins.telescope",
+  ["indent_blankline"] = require "user.plugins.indent-blankline",
 }
