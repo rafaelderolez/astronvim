@@ -7,7 +7,7 @@ return {
     tsserver = {
       settings = {
         typescript = {
-          importModuleSpecifier = true,
+          importModuleSpecifier = "non-relative",
         },
       },
     },
