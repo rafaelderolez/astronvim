@@ -11,7 +11,7 @@ local config = {
   colorscheme = colorscheme,
 
   -- Default theme configuration
-  -- default_theme = require "user.theme",
+  default_theme = require "user.core.theme",
 
   -- Configure plugins
   plugins = require "user.plugins.plugins",
@@ -28,7 +28,7 @@ local config = {
   -- Diagnostics configuration (for vim.diagnostics.config({}))
   diagnostics = require "user.core.diagnostics",
 
-  highlights = require "user.core.highlights",
+  -- highlights = require "user.core.highlights",
 
   -- This function is run last
   -- good place to configure mappings and vim options

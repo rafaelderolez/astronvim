@@ -1,5 +1,7 @@
 return {
   defaults = {
+    results_title = false,
+    dynamic_preview_title = false,
     layout_config = {
       width = 0.90,
       height = 0.85,

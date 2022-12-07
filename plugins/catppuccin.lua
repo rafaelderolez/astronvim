@@ -33,9 +33,9 @@ return {
     cmp = true,
     leap = true,
     treesitter = true,
-    -- treesitter_context = true,
     ts_rainbow = true,
     notify = true,
+    noice = true,
     indent_blankline = {
       enabled = true,
       colored_indent_levels = true,
@@ -44,21 +44,6 @@ return {
       enabled = true,
       show_root = false,
       transparent_panel = false,
-    },
-    native_lsp = {
-      enabled = true,
-      virtual_text = {
-        errors = { "italic" },
-        hints = { "italic" },
-        warnings = { "italic" },
-        information = { "italic" },
-      },
-      underlines = {
-        errors = { "underline" },
-        hints = { "underline" },
-        warnings = { "underline" },
-        information = { "underline" },
-      },
     },
   },
   color_overrides = {},
