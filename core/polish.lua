@@ -27,11 +27,6 @@ return function()
     command = "set formatoptions-=cro",
   })
 
-  vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight on yank",
-    callback = function() vim.highlight.on_yank { higroup = "IncSearch", timeout = 200 } end,
-  })
-
   -- Don't show me a million diagnostics when I'm still typing
   vim.diagnostic.config {
     update_in_insert = false,
