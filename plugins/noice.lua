@@ -6,8 +6,14 @@ return {
     command_palette = true, -- position the cmdline and popupmenu together
     long_message_to_split = true, -- long messages will be sent to a split
     inc_rename = false, -- enables an input dialog for inc-rename.nvim
+    lsp_doc_border = false,
   },
-  lsp = { signature = { enabled = false }, progress = { enabled = false }, hover = { enabled = false } },
+  notify = { disabled = true },
+  lsp = {
+    signature = { enabled = false },
+    progress = { enabled = false },
+    hover = { enabled = false },
+  },
   routes = {
     {
       filter = {
