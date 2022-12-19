@@ -14,6 +14,9 @@ return {
     progress = { enabled = false },
     hover = { enabled = false },
   },
+  messages = {
+    view_search = false,
+  },
   routes = {
     {
       filter = {
