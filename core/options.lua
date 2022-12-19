@@ -8,6 +8,7 @@ return {
     lazyredraw = false,
   },
   g = {
+    heirline_bufferline = true,
     catppuccin_flavour = "mocha",
     copilot_node_command = "~/.nvm/versions/node/v16.17.0/bin/node",
   },
