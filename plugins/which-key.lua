@@ -6,6 +6,7 @@ return {
   register = {
     n = {
       ["<leader>"] = {
+        W = { "<cmd>noa w<CR>", "Save without formatting (noautocmd)" },
         d = { "<cmd>lua require('logsitter').log()<CR>", "Turbo Console Log" },
         f = {
           p = { "<cmd>Telescope projects<CR>", "Telescope Projects" },
