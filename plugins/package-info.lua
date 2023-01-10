@@ -13,6 +13,6 @@ return {
   -- Can be `npm` or `yarn`. Used for `delete`, `install` etc...
   -- The plugin will try to auto-detect the package manager based on
   -- `yarn.lock` or `package-lock.json`. If none are found it will use the
-  -- provided one, if nothing is provided it will use `npm`
+  -- provided one, if nothing is provided it will use `yarn`
   package_manager = "yarn",
 }
