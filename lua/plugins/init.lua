@@ -1,4 +1,4 @@
-if true then return {} end -- REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore allows you easy access to customize the default options provided in AstroNvim
 return {

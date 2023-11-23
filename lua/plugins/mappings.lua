@@ -1,4 +1,4 @@
-if true then return {} end -- REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings set up as well as which-key menu titles
 return {
@@ -8,32 +8,57 @@ return {
     mappings = {
       -- first key is the mode
       n = {
-        -- second key is the lefthand side of the map
+        -- Refactoring
+        ["<leader>r"] = { desc = " Refactoring" },
 
-        -- navigate buffer tabs with `H` and `L`
-        -- L = {
-        --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-        --   desc = "Next buffer",
-        -- },
-        -- H = {
-        --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-        --   desc = "Previous buffer",
-        -- },
-
-        -- mappings seen under group name "Buffer"
-        ["<leader>bD"] = {
-          function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
-          end,
-          desc = "Pick to close",
+        -- Buffers
+        ["]b"] = false,
+        ["[b"] = false,
+        ["<S-l>"] = {
+          function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+          desc = "Next buffer",
         },
-        -- tables with just a `desc` key will be registered with which-key if it's installed
-        -- this is useful for naming menus
-        ["<leader>b"] = { desc = "Buffers" },
-        -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<S-h>"] = {
+          function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+          desc = "Previous buffer",
+        },
+
+        -- Telescope
+        ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "File explorer" },
+        ["<leader>fp"] = {
+          function() require("telescope").extensions.projects.projects() end,
+          desc = "Find projects",
+        },
+        ["<leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
+
+        ["<leader>lS"] = {
+          "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+          desc = "Search Dynamic Workspace Symbols",
+        },
+
+        -- Easy Align
+        ["ga"] = { "<Plug>(EasyAlign)", desc = "Easy Align" },
+
+        ["<leader>lg"] = {
+          "<cmd>lua require('logsitter').log()<cr>",
+        },
+
+        ["<leader>j"] = {
+          name = "ChatGPT",
+          c = { "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
+          e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
+          g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
+          t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
+          k = { "<cmd>ChatGPTRun keywords<CR>", "Keywords", mode = { "n", "v" } },
+          d = { "<cmd>ChatGPTRun docstring<CR>", "Docstring", mode = { "n", "v" } },
+          a = { "<cmd>ChatGPTRun add_tests<CR>", "Add Tests", mode = { "n", "v" } },
+          o = { "<cmd>ChatGPTRun optimize_code<CR>", "Optimize Code", mode = { "n", "v" } },
+          s = { "<cmd>ChatGPTRun summarize<CR>", "Summarize", mode = { "n", "v" } },
+          f = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix Bugs", mode = { "n", "v" } },
+          x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
+          r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen Edit", mode = { "n", "v" } },
+          l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
+        },
       },
       t = {
         -- setting a mapping to false will disable it
