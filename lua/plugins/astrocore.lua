@@ -19,17 +19,6 @@ local opts = {
         end,
       },
     },
-    autohide_tabline = {
-      {
-        event = "User",
-        desc = "Auto hide tabline",
-        pattern = "AstroBufsUpdated",
-        callback = function()
-          local new_showtabline = #vim.t.bufs > 1 and 2 or 1
-          if new_showtabline ~= vim.opt.showtabline:get() then vim.opt.showtabline = new_showtabline end
-        end,
-      },
-    },
   },
 }
 
