@@ -1,9 +1,24 @@
+-- FIX:
+-- TODO:
+-- HACK:
+-- WARN:
+-- PERF:
+-- TEST:
+
 return {
   "folke/todo-comments.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+  event = "User AstroFile",
+  cmd = { "TodoTrouble", "TodoTelescope", "TodoLocList", "TodoQuickFix" },
+  dependencies = {
+    "AstroNvim/astrocore",
+    opts = {
+      mappings = {
+        n = {
+          ["<leader>fT"] = { "<Cmd>TodoTelescope<CR>", desc = "Find TODOs" },
+          ["<leader>xT"] = { "<Cmd>TodoTrouble<CR>", desc = "TODOs (Trouble)" },
+        },
+      },
+    },
   },
+  opts = {},
 }
