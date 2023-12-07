@@ -24,4 +24,15 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     enabled = false,
   },
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = {
+      "AstroNvim/astrolsp",
+    },
+    opts = {
+      settings = {
+        expose_as_code_action = "all",
+      },
+    },
+  },
 }
