@@ -31,6 +31,20 @@ return {
         },
         ["<leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
 
+        -- Pretty pickers
+        ["<leader>ff"] = {
+          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "find_files" } end,
+          desc = "Files",
+        },
+        ["<leader>fo"] = {
+          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "oldfiles" } end,
+          desc = "History",
+        },
+        ["<leader>fw"] = {
+          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "live_grep" } end,
+          desc = "Word",
+        },
+
         ["<leader>lS"] = {
           "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
           desc = "Search Dynamic Workspace Symbols",

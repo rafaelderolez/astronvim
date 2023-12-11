@@ -15,6 +15,13 @@ return {
       config = function() require("telescope").load_extension "import" end,
     },
   },
+  mappings = {
+    n = {
+      ["<leader>ff"] = false,
+      ["<leader>fw"] = false,
+      ["<leader>fo"] = false,
+    },
+  },
   opts = function(_, opts)
     local fb_actions = require("telescope").extensions.file_browser.actions
     return require("astrocore").extend_tbl(opts, {
