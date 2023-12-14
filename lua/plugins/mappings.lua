@@ -41,13 +41,8 @@ return {
           desc = "History",
         },
         ["<leader>fw"] = {
-          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "live_grep" } end,
+          function() require("utils.telescope-pickers").prettyGrepPicker { picker = "live_grep" } end,
           desc = "Word",
-        },
-
-        ["<leader>lS"] = {
-          "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-          desc = "Search Dynamic Workspace Symbols",
         },
 
         -- Easy Align
