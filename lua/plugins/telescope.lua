@@ -1,10 +1,7 @@
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
-    {
-      "nvim-telescope/telescope-file-browser.nvim",
-      config = function() require("telescope").load_extension "file_browser" end,
-    },
+
     {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
@@ -23,7 +20,6 @@ return {
     },
   },
   opts = function(_, opts)
-    local fb_actions = require("telescope").extensions.file_browser.actions
     return require("astrocore").extend_tbl(opts, {
       defaults = {
         file_ignore_patterns = { "node_modules/", ".git/", ".cache/", ".DS_Store", ".vercel/", ".next/" },
@@ -54,16 +50,6 @@ return {
           override_generic_sorter = true, -- override the generic sorter
           override_file_sorter = true, -- override the file sorter
           case_mode = "smart_case", -- "ignore_case" | "respect_case" | "smart_case"
-        },
-        file_browser = {
-          mappings = {
-            i = {
-              H = fb_actions.toggle_hidden,
-            },
-            n = {
-              H = fb_actions.toggle_hidden,
-            },
-          },
         },
       },
       pickers = {
