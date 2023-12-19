@@ -8,27 +8,20 @@ return {
     mappings = {
       -- first key is the mode
       n = {
-        -- Refactoring
-        ["<leader>r"] = { desc = " Refactoring" },
 
         -- Buffers
         ["]b"] = false,
         ["[b"] = false,
-        ["<S-l>"] = {
+        L = {
           function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
           desc = "Next buffer",
         },
-        ["<S-h>"] = {
+        H = {
           function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
           desc = "Previous buffer",
         },
 
         -- Telescope
-        ["<leader>fe"] = { "<cmd>Telescope file_browser<cr>", desc = "File explorer" },
-        ["<leader>fp"] = {
-          function() require("telescope").extensions.projects.projects() end,
-          desc = "Find projects",
-        },
         ["<leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
 
         -- Pretty pickers
@@ -54,7 +47,7 @@ return {
 
         ["<leader>j"] = {
           name = "ChatGPT",
-          c = { "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
+          c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
           e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
           g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
           t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
