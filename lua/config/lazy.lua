@@ -22,18 +22,15 @@ require("lazy").setup {
 
     { import = "astrocommunity.completion.copilot-lua" },
 
-    { import = "astrocommunity.colorscheme.rose-pine" },
-    { import = "astrocommunity.colorscheme.catppuccin" },
+    { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
     { import = "astrocommunity.diagnostics.trouble-nvim" }, -- bottom panel diagnostics
 
     { import = "astrocommunity.editing-support.dial-nvim" }, -- (de|in)crement, toggles,
     { import = "astrocommunity.editing-support.neogen" }, -- annotation generator
-    -- { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" }, -- rainbow brackets
 
     -- { import = "astrocommunity.editing-support.zen-mode-nvim" },
     { import = "astrocommunity.editing-support.cutlass-nvim" },
-    -- { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
 
     { import = "astrocommunity.motion.mini-bracketed" }, -- moving around using []
     { import = "astrocommunity.motion.mini-move" }, -- moving selections
@@ -49,9 +46,6 @@ require("lazy").setup {
     { import = "astrocommunity.pack.yaml" },
 
     { import = "astrocommunity.project.nvim-spectre" },
-    { import = "astrocommunity.project.project-nvim" },
-
-    { import = "astrocommunity.scrolling.nvim-scrollbar" },
 
     { import = "astrocommunity.syntax.vim-cool" }, -- disable search highlighting
 
@@ -60,7 +54,7 @@ require("lazy").setup {
     -- import/override with your plugins
     { import = "plugins" },
   },
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "tokyonight-nvim" } },
   performance = {
     rtp = {
       -- disable some rtp plugins, add more to your liking

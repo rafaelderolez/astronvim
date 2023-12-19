@@ -4,7 +4,7 @@
 
 vim.opt.relativenumber = true -- sets vim.opt.relativenumber
 vim.opt.spell = false -- sets vim.opt.spell
-vim.opt.signcolumn = "auto" -- sets vim.opt.signcolumn to auto
+vim.opt.signcolumn = "yes" -- sets vim.opt.signcolumn to auto
 vim.opt.wrap = true -- sets vim.opt.wrap
 
 -- vim.g.mapleader = " " -- sets vim.g.mapleader
