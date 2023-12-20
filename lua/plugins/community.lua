@@ -25,6 +25,10 @@ return {
     enabled = false,
   },
   {
+    "lewis6991/gitsigns.nvim",
+    enabled = false,
+  },
+  {
     "pmizio/typescript-tools.nvim",
     dependencies = {
       "AstroNvim/astrolsp",

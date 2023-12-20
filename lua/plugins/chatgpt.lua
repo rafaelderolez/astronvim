@@ -1,4 +1,4 @@
-local model = "gpt-3.5-turbo"
+local model = "gpt-4-1106-preview"
 
 return {
   "jackMort/ChatGPT.nvim",
