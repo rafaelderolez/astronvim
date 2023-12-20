@@ -2,7 +2,7 @@ local model = "gpt-4-1106-preview"
 
 return {
   "jackMort/ChatGPT.nvim",
-  event = "VeryLazy",
+  cmd = { "ChatGPT", "ChatGPTActAs", "ChatGPTCompleteCode", "ChatGPTEditWithInstructions", "ChatGPTRun" },
   config = function()
     require("chatgpt").setup {
       api_key_cmd = "op read op://Private/OpenAI/api_key --no-newline",
