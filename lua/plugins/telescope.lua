@@ -1,12 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = {
-
-    {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function() require("telescope").load_extension "fzf" end,
-    },
     {
       "piersolenski/telescope-import.nvim",
       config = function() require("telescope").load_extension "import" end,
@@ -23,8 +17,10 @@ return {
     return require("astrocore").extend_tbl(opts, {
       defaults = {
         file_ignore_patterns = { "node_modules/", ".git/", ".cache/", ".DS_Store", ".vercel/", ".next/" },
-        path_display = { "smart" },
+        -- path_display = { "smart" },
         results_title = false,
+        dynamic_preview_title = true,
+        layout_strategy = "flex",
         layout_config = {
           width = 0.9,
           height = 0.9,
@@ -44,25 +40,9 @@ return {
           },
         },
       },
-      extensions = {
-        fzf = {
-          fuzzy = true, -- false will only do exact matching
-          override_generic_sorter = true, -- override the generic sorter
-          override_file_sorter = true, -- override the file sorter
-          case_mode = "smart_case", -- "ignore_case" | "respect_case" | "smart_case"
-        },
-      },
       pickers = {
         lsp_references = {
           show_line = false,
-        },
-        lsp_dynamic_workspace_symbols = {
-          show_line = false,
-          layout_config = {
-            horizontal = {
-              preview_width = 0.5,
-            },
-          },
         },
       },
     })
