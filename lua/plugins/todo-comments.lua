@@ -1,10 +1,3 @@
--- FIX:
--- TODO:
--- HACK:
--- WARN:
--- PERF:
--- TEST:
-
 return {
   "folke/todo-comments.nvim",
   event = "User AstroFile",
