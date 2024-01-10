@@ -1,1 +1,11 @@
-{"Mapping (Function)":{"prefix":"Mapping (Function)","body":["[\"${1:gD}\"] = {","  desc = \"${2:description}\",","  function() ${3:require(\"plugin\").method()} end,","},"]}}
+{
+  "Mapping (Function)": {
+    "prefix": "Mapping (Function)",
+    "body": [
+      "[\"${1:gD}\"] = {",
+      "  desc = \"${2:description}\",",
+      "  function() ${3:require(\"plugin\").method()} end,",
+      "},"
+    ]
+  }
+}

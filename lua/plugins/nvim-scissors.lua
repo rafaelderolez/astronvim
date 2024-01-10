@@ -3,5 +3,6 @@ return {
   dependencies = "nvim-telescope/telescope.nvim", -- optional
   opts = {
     snippetDir = vim.fn.stdpath "config" .. "/snippets",
+    jsonFormatter = "jq",
   },
 }
