@@ -54,6 +54,9 @@ require("lazy").setup {
     -- User plugins
     { import = "plugins" },
   },
+  ui = {
+    border = "single",
+  },
   install = { colorscheme = { "tokyonight-nvim" } },
   performance = {
     rtp = {
