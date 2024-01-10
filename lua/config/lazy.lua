@@ -10,28 +10,31 @@ require("lazy").setup {
   spec = {
     -- TODO: change `branch="v4"` to `version="^4"` on release
     { "AstroNvim/AstroNvim", branch = "v4", import = "astronvim.plugins" },
-    -- AstroCommunity: import any community modules here
-    -- TODO: Remove branch v4 on release
+
+    -- TODO: remove `branch="v4"` on release
     { "AstroNvim/astrocommunity", branch = "v4" },
 
+    -- Completion plugins
     { import = "astrocommunity.completion.copilot-lua" },
 
+    -- Colorscheme plugins
     { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
+    -- Diagnostics plugins
     { import = "astrocommunity.diagnostics.trouble-nvim" }, -- bottom panel diagnostics
 
+    -- Editing support plugins
     { import = "astrocommunity.editing-support.dial-nvim" }, -- (de|in)crement, toggles,
     { import = "astrocommunity.editing-support.neogen" }, -- annotation generator
-
-    -- { import = "astrocommunity.editing-support.zen-mode-nvim" },
     { import = "astrocommunity.editing-support.cutlass-nvim" },
 
+    -- Motion plugins
     { import = "astrocommunity.motion.mini-bracketed" }, -- moving around using []
     { import = "astrocommunity.motion.mini-move" }, -- moving selections
     { import = "astrocommunity.motion.mini-surround" }, -- surround actions
     { import = "astrocommunity.motion.flash-nvim" }, -- motion
 
-    -- { import = "astrocommunity.pack.astro" },
+    -- Language pack plugins
     { import = "astrocommunity.pack.lua" },
     { import = "astrocommunity.pack.markdown" },
     { import = "astrocommunity.pack.python" },
@@ -39,13 +42,16 @@ require("lazy").setup {
     { import = "astrocommunity.pack.typescript" },
     { import = "astrocommunity.pack.yaml" },
 
-    { import = "astrocommunity.project.nvim-spectre" },
+    -- Project management plugins
+    { import = "astrocommunity.project.nvim-spectre" }, -- find & replace
 
+    -- Syntax plugins
     { import = "astrocommunity.syntax.vim-cool" }, -- disable search highlighting
 
+    -- Utility plugins
     { import = "astrocommunity.utility.noice-nvim" }, -- UI for messages, cmdline and the popupmenu.
 
-    -- import/override with your plugins
+    -- User plugins
     { import = "plugins" },
   },
   install = { colorscheme = { "tokyonight-nvim" } },
