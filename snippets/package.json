@@ -1,0 +1,1 @@
+{"name":"user_snippets","contributes":{"snippets":[{"language":"typescriptreact","path":".\/typescript-react.json"},{"language":["lua"],"path":".\/lua.json"},{"language":["typescript"],"path":".\/typescript.json"}]},"engines":{"vscode":"^1.11.0"}}

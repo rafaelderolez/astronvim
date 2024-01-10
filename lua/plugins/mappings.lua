@@ -1,5 +1,3 @@
--- if true then return {} end -- REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings set up as well as which-key menu titles
 return {
   "AstroNvim/astrocore",
@@ -13,12 +11,12 @@ return {
         ["]b"] = false,
         ["[b"] = false,
         L = {
-          function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
           desc = "Next buffer",
+          function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
         },
         H = {
-          function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
           desc = "Previous buffer",
+          function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
         },
 
         -- Telescope
@@ -26,16 +24,16 @@ return {
 
         -- Pretty pickers
         ["<leader>ff"] = {
-          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "find_files" } end,
           desc = "Files",
+          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "find_files" } end,
         },
         ["<leader>fo"] = {
-          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "oldfiles" } end,
           desc = "History",
+          function() require("utils.telescope-pickers").prettyFilesPicker { picker = "oldfiles" } end,
         },
         ["<leader>fw"] = {
-          function() require("utils.telescope-pickers").prettyGrepPicker { picker = "live_grep" } end,
           desc = "Word",
+          function() require("utils.telescope-pickers").prettyGrepPicker { picker = "live_grep" } end,
         },
 
         -- Easy Align
@@ -60,10 +58,22 @@ return {
           x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
           l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
         },
+
+        -- Snippets
+        ["<leader>sa"] = {
+          desc = "Add new snippet",
+          function() require("scissors").addNewSnippet() end,
+        },
+        ["<leader>se"] = {
+          desc = "Edit snippets",
+          function() require("scissors").editSnippet() end,
+        },
       },
-      t = {
-        -- setting a mapping to false will disable it
-        -- ["<esc>"] = false,
+      x = {
+        ["<leader>sa"] = {
+          desc = "Add new snippet",
+          function() require("scissors").addNewSnippet() end,
+        },
       },
     },
   },
