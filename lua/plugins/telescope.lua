@@ -21,6 +21,7 @@ return {
         results_title = false,
         dynamic_preview_title = true,
         layout_strategy = "flex",
+        filesize_limit = 0.1, -- MB
         layout_config = {
           width = 0.9,
           height = 0.9,
@@ -41,6 +42,9 @@ return {
         },
       },
       pickers = {
+        find_files = {
+          -- previewer = false,
+        },
         lsp_references = {
           show_line = false,
         },
