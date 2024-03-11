@@ -60,7 +60,7 @@ require("lazy").setup {
   ui = {
     border = "single",
   },
-  install = { colorscheme = { "tokyonight-nvim" } },
+  -- install = { colorscheme = { "tokyonight-nvim" } },
   performance = {
     rtp = {
       -- disable some rtp plugins, add more to your liking
