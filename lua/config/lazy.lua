@@ -18,7 +18,6 @@ require("lazy").setup {
     { import = "astrocommunity.completion.copilot-lua" },
 
     -- Colorscheme plugins
-    { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
     -- Diagnostics plugins
     { import = "astrocommunity.diagnostics.trouble-nvim" }, -- bottom panel diagnostics
