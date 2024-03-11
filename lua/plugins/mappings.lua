@@ -7,6 +7,11 @@ return {
       -- first key is the mode
       n = {
 
+        -- Explorer
+        ["<Leader>e"] = {
+          "<Cmd>Yazi<CR>",
+          desc = "Yazi",
+        },
         -- Buffers
         ["]b"] = false,
         ["[b"] = false,
