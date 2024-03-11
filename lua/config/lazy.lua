@@ -44,6 +44,7 @@ require("lazy").setup {
 
     -- LSP
     { import = "astrocommunity.lsp.ts-error-translator-nvim" },
+
     -- Project management plugins
     { import = "astrocommunity.project.nvim-spectre" }, -- find & replace
 
