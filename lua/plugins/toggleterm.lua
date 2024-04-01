@@ -6,6 +6,7 @@ return {
     float_opts = {
       width = 500,
       height = 100,
+      border = "shadow",
     },
   },
 }
