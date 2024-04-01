@@ -1,5 +1,6 @@
 local model = "gpt-4-1106-preview"
 
+---@type LazySpec
 return {
   "jackMort/ChatGPT.nvim",
   cmd = { "ChatGPT", "ChatGPTActAs", "ChatGPTCompleteCode", "ChatGPTEditWithInstructions", "ChatGPTRun" },

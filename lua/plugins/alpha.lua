@@ -9,6 +9,7 @@ local doSomething = {
   [[╚═════╝  ╚═════╝ ╚══════╝    ╚═╝╚══════╝   ╚═╝   ╚══════╝]],
 }
 
+---@type LazySpec
 local M = {
   "goolord/alpha-nvim",
   enabled = true,

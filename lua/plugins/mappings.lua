@@ -1,4 +1,5 @@
 -- AstroCore provides a central place to modify mappings set up as well as which-key menu titles
+---@type LazySpec
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts

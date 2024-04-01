@@ -1,3 +1,4 @@
+--- @type LazySpec
 return {
   "DreamMaoMao/yazi.nvim",
   dependencies = {
