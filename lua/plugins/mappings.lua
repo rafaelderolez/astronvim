@@ -80,6 +80,8 @@ return {
           desc = "Add new snippet",
           function() require("scissors").addNewSnippet() end,
         },
+        -- Don't yank when pasting over something
+        p = "P",
       },
     },
   },
