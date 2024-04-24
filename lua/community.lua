@@ -10,14 +10,23 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
 
   -- Colorscheme plugins
+  { import = "astrocommunity.color.nvim-highlight-colors" },
 
   -- Diagnostics plugins
   { import = "astrocommunity.diagnostics.trouble-nvim" }, -- bottom panel diagnostics
+  { import = "astrocommunity.diagnostics.error-lens-nvim" }, -- enhanced visual diagnostic display for Neovim
 
   -- Editing support plugins
   { import = "astrocommunity.editing-support.dial-nvim" }, -- (de|in)crement, toggles,
   { import = "astrocommunity.editing-support.neogen" }, -- annotation generator
   { import = "astrocommunity.editing-support.cutlass-nvim" },
+  -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
+  { import = "astrocommunity.editing-support.nvim-devdocs" },
+
+  { import = "astrocommunity.git.blame-nvim" },
+
+  -- Keybinding
+  { import = "astrocommunity.keybinding.nvcheatsheet-nvim" },
 
   -- Motion plugins
   { import = "astrocommunity.motion.mini-bracketed" }, -- moving around using []
@@ -27,18 +36,23 @@ return {
 
   -- Language pack plugins
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
 
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.markdown-and-latex.glow-nvim" },
+
   -- LSP
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
 
   -- Project management plugins
   { import = "astrocommunity.project.nvim-spectre" }, -- find & replace
+
+  -- Recipes
+  { import = "astrocommunity.recipes.vscode-icons" },
 
   -- Syntax plugins
   { import = "astrocommunity.syntax.vim-cool" }, -- disable search highlighting
@@ -51,10 +65,10 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     enabled = false,
   },
-  {
-    "lewis6991/gitsigns.nvim",
-    enabled = false,
-  },
+  -- {
+  --   "lewis6991/gitsigns.nvim",
+  --   enabled = false,
+  -- },
   {
     "pmizio/typescript-tools.nvim",
     dependencies = {
@@ -79,4 +93,5 @@ return {
       },
     },
   },
+  { "ellisonleao/glow.nvim", opts = {} },
 }

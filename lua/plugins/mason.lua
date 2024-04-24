@@ -26,6 +26,7 @@ return {
       opts.handlers.biome = function()
         local null_ls = require "null-ls"
         local has_biome = function(util) return util.root_has_file "biome.json" end
+
         null_ls.register(null_ls.builtins.formatting.biome.with {
           condition = has_biome,
           args = {

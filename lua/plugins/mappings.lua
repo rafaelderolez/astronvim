@@ -16,14 +16,8 @@ return {
         -- Buffers
         ["]b"] = false,
         ["[b"] = false,
-        L = {
-          desc = "Next buffer",
-          function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-        },
-        H = {
-          desc = "Previous buffer",
-          function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-        },
+        L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- Telescope
         ["<leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
@@ -74,6 +68,9 @@ return {
           desc = "Edit snippets",
           function() require("scissors").editSnippet() end,
         },
+
+        --
+        ["<leader>."] = { ":RunCode<CR>", desc = "Run code" },
       },
       x = {
         ["<leader>sa"] = {
