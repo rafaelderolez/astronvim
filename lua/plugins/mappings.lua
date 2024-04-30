@@ -7,7 +7,6 @@ return {
     mappings = {
       -- first key is the mode
       n = {
-
         -- Explorer
         ["<Leader>e"] = {
           "<Cmd>Yazi<CR>",
@@ -41,6 +40,7 @@ return {
 
         ["<leader>lg"] = {
           "<cmd>lua require('logsitter').log()<cr>",
+          desc = "Log Sitter",
         },
 
         ["<leader>j"] = {
