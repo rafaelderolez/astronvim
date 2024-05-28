@@ -19,66 +19,91 @@ return {
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- Telescope
-        ["<leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
+        ["<Leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
 
         -- Pretty pickers
-        ["<leader>ff"] = {
+        ["<Leader>ff"] = {
           desc = "Files",
           function() require("utils.telescope-pickers").prettyFilesPicker { picker = "find_files" } end,
         },
-        ["<leader>fo"] = {
+        ["<Leader>fo"] = {
           desc = "History",
           function() require("utils.telescope-pickers").prettyFilesPicker { picker = "oldfiles" } end,
         },
-        ["<leader>fw"] = {
+        ["<Leader>fw"] = {
           desc = "Word",
           function() require("utils.telescope-pickers").prettyGrepPicker { picker = "live_grep" } end,
         },
 
-        -- Easy Align
-        ["ga"] = { "<Plug>(EasyAlign)", desc = "Easy Align" },
-
-        ["<leader>lg"] = {
+        ["<Leader>lg"] = {
           "<cmd>lua require('logsitter').log()<cr>",
           desc = "Log Sitter",
         },
 
-        ["<leader>j"] = {
-          name = "ChatGPT",
-          c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-          e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
-          g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
-          t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
-          k = { "<cmd>ChatGPTRun keywords<CR>", "Keywords", mode = { "n", "v" } },
-          d = { "<cmd>ChatGPTRun docstring<CR>", "Docstring", mode = { "n", "v" } },
-          a = { "<cmd>ChatGPTRun add_tests<CR>", "Add Tests", mode = { "n", "v" } },
-          o = { "<cmd>ChatGPTRun optimize_code<CR>", "Optimize Code", mode = { "n", "v" } },
-          s = { "<cmd>ChatGPTRun summarize<CR>", "Summarize", mode = { "n", "v" } },
-          f = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix Bugs", mode = { "n", "v" } },
-          x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
-          l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
+        ["<Leader>j"] = {
+          name = "Copilot Chat",
+          t = { "<cmd>CopilotChatToggle<CR>", desc = "Toggle chat" },
+          q = {
+            function()
+              local input = vim.fn.input "Quick Chat: "
+              if input ~= "" then require("CopilotChat").ask(input, { context = "buffers" }) end
+            end,
+            "Quick chat",
+          },
+          h = {
+            function()
+              local actions = require "CopilotChat.actions"
+              require("CopilotChat.integrations.telescope").pick(actions.help_actions())
+            end,
+            "Help actions",
+          },
+          p = {
+            function()
+              local actions = require "CopilotChat.actions"
+              require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+            end,
+            "Prompt actions",
+          },
         },
 
         -- Snippets
-        ["<leader>sa"] = {
+        ["<Leader>sa"] = {
           desc = "Add new snippet",
           function() require("scissors").addNewSnippet() end,
         },
-        ["<leader>se"] = {
+        ["<Leader>se"] = {
           desc = "Edit snippets",
           function() require("scissors").editSnippet() end,
         },
 
-        --
-        ["<leader>."] = { ":RunCode<CR>", desc = "Run code" },
+        ["<Leader>."] = { ":RunCode<CR>", desc = "Run code" },
+
+        ["<Leader>v"] = {
+          name = "vtsls",
+          r = { "<cmd>VtsExec restart_tsserver<CR>", "Restart TS Server" },
+          l = { "<cmd>VtsExec open_tsserver_log<CR>", "Open TS Server Log" },
+          p = { "<cmd>VtsExec reload_projects<CR>", "Reload Projects" },
+          s = { "<cmd>VtsExec select_ts_version<CR>", "Select TS Version" },
+          c = { "<cmd>VtsExec goto_project_config<CR>", "Go to Project Config" },
+          d = { "<cmd>VtsExec goto_source_definition<CR>", "Go to Source Definition" },
+          f = { "<cmd>VtsExec file_references<CR>", "File References" },
+          n = { "<cmd>VtsExec rename_file<CR>", "Rename File" },
+          o = { "<cmd>VtsExec organize_imports<CR>", "Organize Imports" },
+          i = { "<cmd>VtsExec sort_imports<CR>", "Sort Imports" },
+          u = { "<cmd>VtsExec remove_unused_imports<CR>", "Remove Unused Imports" },
+          a = { "<cmd>VtsExec fix_all<CR>", "Fix All" },
+          x = { "<cmd>VtsExec remove_unused<CR>", "Remove Unused" },
+          m = { "<cmd>VtsExec add_missing_imports<CR>", "Add Missing Imports" },
+          S = { "<cmd>VtsExec source_actions<CR>", "Source Actions" },
+        },
       },
       x = {
-        ["<leader>sa"] = {
+        ["<Leader>sa"] = {
           desc = "Add new snippet",
           function() require("scissors").addNewSnippet() end,
         },
         -- Don't yank when pasting over something
-        p = "P",
+        p = { '"_dP', desc = "Paste without yanking" },
       },
     },
   },
