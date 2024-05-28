@@ -18,7 +18,9 @@ return {
     return require("astrocore").extend_tbl(opts, {
       defaults = {
         file_ignore_patterns = { "node_modules/", ".git/", ".cache/", ".DS_Store", ".vercel/", ".next/" },
-        -- path_display = { "smart" },
+        path_display = {
+          "filename_first",
+        },
         results_title = false,
         dynamic_preview_title = true,
         layout_strategy = "flex",
