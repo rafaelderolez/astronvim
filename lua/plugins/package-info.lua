@@ -14,7 +14,7 @@ return {
       callback = function(event)
         local which_key = require "which-key"
         which_key.register {
-          ["<leader>n"] = "NPM",
+          ["<Leader>n"] = "NPM",
         }
 
         local pi = require "package-info"
@@ -23,11 +23,11 @@ return {
           vim.keymap.set(mode, key, func, { buffer = event.buf, desc = desc })
         end
 
-        create_keymap("n", "<leader>nc", pi.change_version, "Change version")
-        create_keymap("n", "<leader>nd", pi.delete, "Delete dependency")
-        create_keymap("n", "<leader>ni", pi.install, "Install dependency")
-        create_keymap("n", "<leader>nu", pi.update, "Update dependency")
-        create_keymap("n", "<leader>nt", pi.toggle, "Toggle")
+        create_keymap("n", "<Leader>nc", pi.change_version, "Change version")
+        create_keymap("n", "<Leader>nd", pi.delete, "Delete dependency")
+        create_keymap("n", "<Leader>ni", pi.install, "Install dependency")
+        create_keymap("n", "<Leader>nu", pi.update, "Update dependency")
+        create_keymap("n", "<Leader>nt", pi.toggle, "Toggle")
       end,
     })
   end,
