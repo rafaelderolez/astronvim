@@ -9,7 +9,6 @@ return {
       mappings = {
         n = {
           ["<leader>fT"] = { "<Cmd>TodoTelescope<CR>", desc = "Find TODOs" },
-          ["<leader>xT"] = { "<Cmd>TodoTrouble<CR>", desc = "TODOs (Trouble)" },
         },
       },
     },
