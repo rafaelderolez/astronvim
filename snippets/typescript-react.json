@@ -1,4 +1,21 @@
 {
+  "Typescript Functional Component": {
+    "body": [
+      "type ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
+      "  $1",
+      "}",
+      "",
+      "export function ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}(props: ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props) {",
+      "  return (",
+      "    <div>",
+      "     ${3:$TM_FILENAME_BASE}",
+      "    </div>",
+      "  )",
+      "}"
+    ],
+    "prefix": "comp",
+    "scope": "typescriptreact"
+  },
   "Typescript React component": {
     "body": [
       "import { FC } from 'react'",
@@ -15,7 +32,7 @@
       "  )",
       "}"
     ],
-    "prefix": "comp",
+    "prefix": "compfc",
     "scope": "typescriptreact"
   },
   "useState": {
