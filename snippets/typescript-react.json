@@ -1,7 +1,7 @@
 {
   "Typescript Functional Component": {
     "body": [
-      "type ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
+      "type ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props = {",
       "  $1",
       "}",
       "",

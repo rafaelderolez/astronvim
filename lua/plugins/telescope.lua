@@ -7,11 +7,16 @@ return {
       config = function() require("telescope").load_extension "import" end,
     },
   },
-  mappings = {
-    n = {
-      ["<leader>ff"] = false,
-      ["<leader>fw"] = false,
-      ["<leader>fo"] = false,
+  specs = {
+    {
+      "AstroNvim/astrocore",
+      opts = {
+        mappings = {
+          n = {
+            ["<Leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
+          },
+        },
+      },
     },
   },
   opts = function(_, opts)

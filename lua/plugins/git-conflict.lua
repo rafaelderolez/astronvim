@@ -12,16 +12,19 @@ return {
     "GitConflictPrevConflict",
     "GitConflictListQf",
   },
-  init = function()
-    require("which-key").register {
-      ["<leader>gc"] = { name = "Conflict" },
-    }
-  end,
-  keys = {
-    { "<Leader>gcb", "<cmd>GitConflictChooseBoth<CR>", desc = "choose both" },
-    { "<Leader>gcn", "<cmd>GitConflictNextConflict<CR>", desc = "move to next conflict" },
-    { "<Leader>gcc", "<cmd>GitConflictChooseOurs<CR>", desc = "choose current" },
-    { "<Leader>gcp", "<cmd>GitConflictPrevConflict<CR>", desc = "move to prev conflict" },
-    { "<Leader>gci", "<cmd>GitConflictChooseTheirs<CR>", desc = "choose incoming" },
+
+  {
+    "AstroNvim/astrocore",
+    opts = function(_, opts)
+      local maps = opts.mappings
+      local prefix = "<Leader>gc"
+      maps.n[prefix] = { desc = require("astroui").get_icon("Git", 1, true) .. "Git Conflict" }
+
+      maps.n[prefix .. "b"] = { "<cmd>GitConflictChooseBoth<CR>", desc = "Choose Both" }
+      maps.n[prefix .. "n"] = { "<cmd>GitConflictNextConflict<CR>", desc = "Move to Next Conflict" }
+      maps.n[prefix .. "c"] = { "<cmd>GitConflictChooseOurs<CR>", desc = "Choose Current" }
+      maps.n[prefix .. "p"] = { "<cmd>GitConflictPrevConflict<CR>", desc = "Move to Prev Conflict" }
+      maps.n[prefix .. "i"] = { "<cmd>GitConflictChooseTheirs<CR>", desc = "Choose Incoming" }
+    end,
   },
 }

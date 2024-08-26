@@ -12,4 +12,16 @@ return {
     },
     mode = "toggleterm",
   },
+  specs = {
+    {
+      "AstroNvim/astrocore",
+      opts = {
+        mappings = {
+          n = {
+            ["<Leader>."] = { "<cmd>RunCode<CR>", desc = "Run code" },
+          },
+        },
+      },
+    },
+  },
 }

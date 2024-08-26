@@ -12,8 +12,8 @@ return { -- override nvim-cmp plugin
       { name = "buffer", priority = 500 },
       { name = "path", priority = 250 },
     }
-    opts.formatting = {
-      format = require("lspkind").cmp_format(),
-    }
+    -- opts.formatting = {
+    --   format = require("lspkind").cmp_format(),
+    -- }
   end,
 }

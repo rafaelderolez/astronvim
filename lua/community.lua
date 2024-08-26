@@ -7,7 +7,7 @@ return {
   "AstroNvim/astrocommunity",
 
   -- Completion plugins
-  { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
 
   -- Colorscheme plugins
   { import = "astrocommunity.color.nvim-highlight-colors" },
@@ -49,10 +49,11 @@ return {
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
 
   -- Project management plugins
-  { import = "astrocommunity.project.nvim-spectre" }, -- find & replace
+  { import = "astrocommunity.search.grug-far-nvim" }, -- find & replace
 
   -- Recipes
   { import = "astrocommunity.recipes.vscode-icons" },
+  { import = "astrocommunity.recipes.telescope-lsp-mappings" },
 
   -- Syntax plugins
   { import = "astrocommunity.syntax.vim-cool" }, -- disable search highlighting
@@ -79,4 +80,5 @@ return {
     },
   },
   { "ellisonleao/glow.nvim", opts = {} },
+  { "max397574/better-escape.nvim", enabled = false },
 }
