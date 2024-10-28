@@ -6,6 +6,10 @@ return {
       "piersolenski/telescope-import.nvim",
       config = function() require("telescope").load_extension "import" end,
     },
+    {
+      "vuki656/package-info.nvim",
+      config = function() require("telescope").load_extension "package_info" end,
+    },
   },
   specs = {
     {
@@ -13,7 +17,8 @@ return {
       opts = {
         mappings = {
           n = {
-            ["<Leader>fi"] = { "<cmd>Telescope import<cr>", desc = "Find imports" },
+            ["<Leader>fi"] = { "<cmd>Telescope import<CR>", desc = "Find imports" },
+            ["<Leader>pj"] = { "<cmd>Telescope package_info<CR>", desc = "Package Info" },
           },
         },
       },
@@ -55,6 +60,11 @@ return {
         },
         lsp_references = {
           show_line = false,
+        },
+      },
+      extensions = {
+        package_info = {
+          theme = "cursor",
         },
       },
     })

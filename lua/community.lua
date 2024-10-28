@@ -11,6 +11,7 @@ return {
 
   -- Colorscheme plugins
   { import = "astrocommunity.color.nvim-highlight-colors" },
+  { import = "astrocommunity.colorscheme.neofusion-nvim" },
 
   -- Diagnostics plugins
   { import = "astrocommunity.diagnostics.trouble-nvim" }, -- bottom panel diagnostics
@@ -41,7 +42,6 @@ return {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
-
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
 

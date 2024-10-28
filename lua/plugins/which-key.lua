@@ -3,8 +3,8 @@ return {
   opts = {
     win = {
       no_overlap = true,
-      border = "none",
-      padding = { 2, 3 }, -- extra window padding [top/bottom, right/left]
+      border = "single",
+      padding = { 1, 2 }, -- extra window padding [top/bottom, right/left]
       title = true,
       title_pos = "center",
       zindex = 1000,

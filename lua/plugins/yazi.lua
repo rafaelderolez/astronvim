@@ -1,17 +1,14 @@
 --- @type LazySpec
 return {
-  "DreamMaoMao/yazi.nvim",
-  dependencies = {
-    "nvim-telescope/telescope.nvim",
-    "nvim-lua/plenary.nvim",
-  },
+  "mikavilpas/yazi.nvim",
+  event = "VeryLazy",
   specs = {
     {
       "AstroNvim/astrocore",
       opts = {
         mappings = {
           n = {
-            ["<Leader>e"] = { "<Cmd>Yazi<CR>", desc = "Explorer" },
+            ["<Leader>e"] = { "<Cmd>Yazi<CR>", desc = "Explorer (Yazi)" },
           },
         },
       },

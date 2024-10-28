@@ -15,11 +15,11 @@ return {
           n = {
             ["<Leader>lg"] = {
               "<cmd>lua require('logsitter').log()<cr>",
-              desc = "Log Sitter",
+              desc = "Log Sitter - Add log",
             },
             ["<Leader>lc"] = {
               "<cmd>LogsitterClearBuf<CR>",
-              desc = "Log Sitter",
+              desc = "Log Sitter - Clear)",
             },
           },
         },
