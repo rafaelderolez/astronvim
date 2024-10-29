@@ -47,6 +47,7 @@ return {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
       emmet_ls = {
         enabled = false,
+        autostart = false,
       },
     },
     -- customize how language servers are attached
