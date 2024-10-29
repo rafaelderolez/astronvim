@@ -9,20 +9,17 @@ return {
   -- Completion plugins
   -- { import = "astrocommunity.completion.copilot-lua" },
 
-  -- Colorscheme plugins
+  -- Color plugins
   { import = "astrocommunity.color.nvim-highlight-colors" },
-  { import = "astrocommunity.colorscheme.neofusion-nvim" },
 
   -- Diagnostics plugins
   { import = "astrocommunity.diagnostics.trouble-nvim" }, -- bottom panel diagnostics
-  { import = "astrocommunity.diagnostics.error-lens-nvim" }, -- enhanced visual diagnostic display for Neovim
+  -- { import = "astrocommunity.diagnostics.error-lens-nvim" }, -- enhanced visual diagnostic display for Neovim
 
   -- Editing support plugins
   { import = "astrocommunity.editing-support.dial-nvim" }, -- (de|in)crement, toggles,
   { import = "astrocommunity.editing-support.neogen" }, -- annotation generator
   { import = "astrocommunity.editing-support.cutlass-nvim" },
-  -- { import = "astrocommunity.editing-support.nvim-treesitter-context" },
-  { import = "astrocommunity.editing-support.nvim-devdocs" },
 
   { import = "astrocommunity.git.blame-nvim" },
 
