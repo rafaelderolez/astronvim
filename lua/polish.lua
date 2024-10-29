@@ -1,5 +1,9 @@
 local lspConfigWindows = require "lspconfig.ui.windows"
+local cos = require "codeactions-on-save"
+
 lspConfigWindows.default_options.border = "single"
+
+cos.register({ "*.ts", "*.tsx" }, { "source.organizeImports.biome" })
 
 -- This file is automatically ran last in the setup process and is a good place to configure
 -- augroups/autocommands and custom filetypes also this just pure lua so
